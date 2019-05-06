@@ -142,4 +142,8 @@ function isLastCar(car, index) {
 const theLastCar = inventory.filter(isLastCar);
 console.log(`The make of the last car is ${theLastCar[0].car_make}, while the model is ${theLastCar[0].car_model}`);
 
-// console.log(`The make of the last car is ${inventory[theLastCar].car_make}, while the model is ${inventory[theLastCar].car_model}`);
+// ==== Challenge 3 ====
+// The marketing team wants the car models listed alphabetically on the website. Sort all the car model names into alphabetical order and log the results in the console
+
+const mapChallenge3 = inventory.map(car => car.car_model)
+console.log(mapChallenge3.sort());
