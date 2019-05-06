@@ -124,5 +124,22 @@ console.log(JSON.stringify(BMWAndAudi));
 // ==== Challenge 1 Stretch ====
 const filterChallenge1 = inventory.filter(car => car.id === 33);
 
-let car = filterChallenge1;
+const car = filterChallenge1;
 console.log(`Car 33 is a ${car[0]["car_year"]} ${car[0]["car_make"]} ${car[0]["car_model"]}`);
+
+
+
+// ==== Challenge 2 Stretch ====
+
+// The dealer needs the information on the last car in their inventory.  What is the make and model of the last car in the inventory?  Log the make and model into the console.
+
+// const filterChallenge2 = inventory.filter(car => car[index] === inventory.length -1)
+
+function isLastCar(car, index) {
+    return index === inventory.length - 1;
+}
+
+const theLastCar = inventory.filter(isLastCar);
+console.log(`The make of the last car is ${theLastCar[0].car_make}, while the model is ${theLastCar[0].car_model}`);
+
+// console.log(`The make of the last car is ${inventory[theLastCar].car_make}, while the model is ${inventory[theLastCar].car_model}`);
