@@ -110,7 +110,10 @@ for(let i = 0; i < carYears.length; i++) {
 console.log(oldCars.length);
 
 // ==== Challenge 6 ====
-// A buyer is interested in seeing only BMW and Audi cars within the inventory.  Return an array that only contains BMW and Audi cars.  Once you have populated the BMWAndAudi array, use JSON.stringify() to show the results of the array in the console.
+// A buyer is interested in seeing only BMW and Audi cars within the inventory.  
+// Return an array that only contains BMW and Audi cars.  
+// Once you have populated the BMWAndAudi array, use JSON.stringify() to show the results of the array in the console.
+
 let BMWAndAudi = [];
 for(let i = 0; i < inventory.length; i++) {
     if(inventory[i].car_make === "BMW" || inventory[i].car_make === "Audi") {
@@ -118,6 +121,12 @@ for(let i = 0; i < inventory.length; i++) {
     }
 }
 console.log(JSON.stringify(BMWAndAudi));
+
+
+
+
+
+
 
 
 
@@ -142,8 +151,31 @@ function isLastCar(car, index) {
 const theLastCar = inventory.filter(isLastCar);
 console.log(`The make of the last car is ${theLastCar[0].car_make}, while the model is ${theLastCar[0].car_model}`);
 
-// ==== Challenge 3 ====
+// ==== Challenge 3 Stretch ====
 // The marketing team wants the car models listed alphabetically on the website. Sort all the car model names into alphabetical order and log the results in the console
 
 const mapChallenge3 = inventory.map(car => car.car_model)
 console.log(mapChallenge3.sort());
+
+
+// ==== Challenge 4 Stretch ====
+// The accounting team needs all the years from every car on the lot. Create a new array from the dealer data containing only the car years and log the result in the console.
+
+const mapChallenge4 = inventory.map(car => car.car_year)
+let newCarsArrays = mapChallenge4;
+console.log(newCarsArrays);
+
+
+// ==== Challenge 5 Stretch ====
+// The car lot manager needs to find out how many cars are older than the year 2000. Using the carYears array you just created, find out how many cars were made before the year 2000 by populating the array oldCars and logging it's length.
+
+const filterChallenge5 = newCarsArrays.filter(year => year < 2000);
+console.log(filterChallenge5);
+
+// ==== Challenge 6 ====
+// A buyer is interested in seeing only BMW and Audi cars within the inventory.  
+// Return an array that only contains BMW and Audi cars.  
+// Once you have populated the BMWAndAudi array, use JSON.stringify() to show the results of the array in the console.
+
+const filterChallenge6 = inventory.filter(car => car.car_make === "Audi" || car.car_make === "BMW")
+console.log(JSON.stringify(filterChallenge6))
