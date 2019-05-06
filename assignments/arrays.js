@@ -72,6 +72,7 @@ for(let i = 0; i < inventory.length; i++) {
         console.log(`Car 33 is a ${carYear} ${carMake} ${carModel}`);
     }
 }
+
 // console.log(`Car 33 is a *car year goes here* *car make goes here* *car model goes here*` );
 
 
@@ -120,3 +121,8 @@ console.log(JSON.stringify(BMWAndAudi));
 
 
 
+// ==== Challenge 1 Stretch ====
+const filterChallenge1 = inventory.filter(car => car.id === 33);
+
+let car = filterChallenge1;
+console.log(`Car 33 is a ${car[0]["car_year"]} ${car[0]["car_make"]} ${car[0]["car_model"]}`);
