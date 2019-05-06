@@ -66,21 +66,20 @@ let inventory = [{"id":1,"car_make":"Lincoln","car_model":"Navigator","car_year"
 
 for(let i = 0; i < inventory.length; i++) {
     if(inventory[i].id === 33) {
-        var carYear = inventory[i]["car_year"];
-        var carMake = inventory[i]["car_make"];
-        var carModel = inventory[i]["car_model"];
+        let carYear = inventory[i]["car_year"];
+        let carMake = inventory[i]["car_make"];
+        let carModel = inventory[i]["car_model"];
+        console.log(`Car 33 is a ${carYear} ${carMake} ${carModel}`);
     }
 }
-
 // console.log(`Car 33 is a *car year goes here* *car make goes here* *car model goes here*` );
-
-console.log(`Car 33 is a ${carYear} ${carMake} ${carModel}`);
 
 
 // ==== Challenge 2 ====
 // The dealer needs the information on the last car in their inventory.  What is the make and model of the last car in the inventory?  Log the make and model into the console.
-let lastCar = 0;
-console.log();
+let lastCar = inventory.length - 1;
+
+console.log(`The make of the last car is ${inventory[lastCar].car_make}, while the model is ${inventory[lastCar].car_model}`);
 
 // ==== Challenge 3 ====
 // The marketing team wants the car models listed alphabetically on the website. Sort all the car model names into alphabetical order and log the results in the console
